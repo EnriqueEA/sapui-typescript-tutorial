@@ -1,9 +1,10 @@
 sap.ui.define([
 	"sap/ui/core/mvc/XMLView"
-], (XMLView) => {
+], async (XMLView) => {
 	"use strict";
 
-	XMLView.create({
+	const oView = await XMLView.create({
 		viewName: "ui5.quickstart.App"
-	}).then((oView) => oView.placeAt("content"));
+	})
+  oView.placeAt("content");
 });
